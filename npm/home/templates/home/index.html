@@ -1,0 +1,123 @@
+{% extends "home\basic.html" %}
+
+{% block title %}
+HOME PAGE
+{% endblock title %}
+
+{% block css %}
+
+{% endblock css %}
+
+{% block body %}
+
+{% if messages %}
+<ul class="messages list-unstyled">
+    {% for message in messages %}
+    <li {% if message.tags %}>
+
+      <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        <strong> {{ message }} </strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+{% endif %}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<main role="main">
+
+
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron" style="text-align: center; ">
+    <br/>
+      <div class="container" >
+        <h1 class="display-3"  > WE WELCOME YOU TO THE CODERS SUBMISSION!!!
+
+          {% if user.is_authenticated  %}
+        Welcome {{request.user.first_name}}
+          {% endif %}
+</br>
+        </h1>
+        <p>Due to <abbr title="SARS-CoV-2"> Covid - 19 </abbr>pandemic, it has been decided to postpone Educational Support Service Centre/ <abbr title="Educational Support Centre"> LSC </abbr></p>
+        <p> The <b>CODERS SUBMISSION </b>has, further decided to introduce and adopt “Online Mode” to submit final MicroProject/Journals/Manual Report to facilitate the learners. </p>
+   
+<marquee width="65%" direction="left" height="45px" >
+<font color="red">
+Last date of Online Submission of MicroProject/Journal/Manual is <b> 1st November 2021</b>
+</font>
+</marquee>
+      </div>
+    </div>
+</br>
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2 align="center"><b>Microproject Guidelines</b></h2>
+          <p>Project report is a written document submitted by the students on the project
+work/assignment carried by them. The report is a formal document. It should
+therefore be presented with a lot of care and thought. Before preparing the report,
+student should go through the following guidelines.
+Appearance
+ The size of the report should be such that it is easy to use and handle. For
+this purpose, the following points are worth noting:
+(a) Size: Recommended size of the report is 9" X 11".
+(b) Writing of the Report: The report should be typed in double space on one side 
+2
+of the sheet and the pages should be numbered serially.
+(c) Margin: About 1" on all the four sides of the sheet.
+(d) Number of Copies: Two (one for the department, one for the organization).
+</p>
+          <p><a class="btn btn-danger" href="https://www.imi.europa.eu/sites/default/files/uploads/documents/apply-for-funding/call-documents/imi1/Annex2_FinalReportTemplate.pdf" role="button" style="border-radius: 50px;box-shadow: 5px 10px pink" >CLICK HERE TO VIEW SAMPLE !!</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2 align="center"><b>Journal Guidelines</b></h2>
+          <p>Original Research Articles
+
+Original Research papers with new experimental studies should be submitted in an elaborated form comprising a major contribution to knowledge. Word limit for manuscripts should be 3000 worlds for full article; however it is depends on type of article. The sequence of the research paper should be as follows:
+
+Cover Letter
+Title Page
+Abstracts
+Conclusion
+Acknowledgement (If Any)
+References
+COVER LETTER: Author(s) can send a cover letter along with each manuscript (optional)
+TITLE: First page should be kept as title page in all manuscripts with the further text being paginated. Abbreviation should not use in title page. 
+ABSTRACT: Abstract should be presented at the beginning of the paper and should not exceed 300 words. It should be completely informative, self explanatory, stating the scope of the research, indicating significant observations, data and conclusions. References and abbreviations should be avoided. Standard classifications and acronyms should be used.
+DISCUSSION: In this section, elaborate the findings of the research work by giving the justification of current result using updated and scientific literature. This section should also mention the justification about the shortcoming or lacunae of the current study providing future directions and prospects.
+CONCLUSION: This section should precisely highlight the major significance, relevance, purpose and usefulness of the study. It should describe a short summary and further scope in the field.</p>
+          <a class="btn btn-danger" href="https://btsau.edu.ua/sites/default/files/scopus/%D0%A1%D1%83%D0%BF%D0%B5%D1%80%20-%20writing_an_academic_journal_article.pdf" role="button" style="border-radius: 50px; box-shadow: 5px 10px pink" >CLICK HERE TO VIEW SAMPLE !! </a></p>
+        </div>
+        <div class="col-md-4">
+          <h2 align="center"><b>Manual Guidelines</b></h2>
+          <p>Final Report Submission Manual
+From the AY 2020 spring semester the Academic Office will no longer be collecting final reports in
+Building H. All final reports will instead be collected via manaba. Please read through this manual
+carefully for detailed instructions on how to submit your report.
+BEFORE SUBMITTING YOUR REPORT
+• Please include a cover page with your report. The cover page should have the course name,
+instructor’s name, your student ID number, and your name.
+• All reports must be in PDF format. Word (.doc, docx) or other formats will NOT be accepted.
+*To save as PDF in Word: Click “File” → “Save As” → Choose where to save the file → Select “PDF”
+from the “Save as Type” menu under the file name → Save
+• Use the designated File Name Format: [Student ID Number_Student Name_Course Name]Use an easily readable font like 12 pt Times New Roman. Set 1 inch page margins. Apply double line spacing. Indent every new paragraph ½ inch. Use title case capitalization for headings. The Modalities/feasibility in respect of Research Paper for consideration of collection of primary data, exploration and analysis of secondary research data in lieu of field work journal may be suggested / prepared by the SOSW. A separate guideline to the learner is to be issued from the concerned School for submitting the Research Paper through online.</p>
+          <p><a class="btn btn-danger" href="https://www.coep.org.in/page_assets/491/IEEE_Template_4.pdf" role="button" style="border-radius: 50px; box-shadow: 5px 10px pink">CLICK HERE TO VIEW SAMPLE !!</a></p>
+        </div>
+      </div>
+</br>
+      <hr>
+
+    </div> <!-- /container -->
+
+  </main>
+
+
+  <footer class="container" style="text-align: center">
+    <p><b>&copy; CODERS SUBMISSION  2020-2021</b></p>
+  </footer>
+
+
+{% endblock body %}
